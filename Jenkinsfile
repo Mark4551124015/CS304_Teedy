@@ -24,7 +24,11 @@ pipeline {
             }
         }
 
-        post {
+        
+        
+
+    }
+    post {
             always {
                 archiveArtifacts artifacts: '**/target/site/**', fingerprint: true
                 archiveArtifacts artifacts: '**/target/surefire-reports/**', fingerprint: true
@@ -32,7 +36,4 @@ pipeline {
                 archiveArtifacts artifacts: '**/target/**/*.war', fingerprint: true
             }
         }
-        
-
-    }
 }
